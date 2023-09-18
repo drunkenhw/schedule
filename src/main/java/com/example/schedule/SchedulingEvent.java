@@ -4,7 +4,6 @@ import java.time.LocalDateTime;
 
 public record SchedulingEvent(
         Runnable runnable,
-        String jobName,
-        LocalDateTime executionTime
-) {
+        String jobId,
+        LocalDateTime executionTime) {
 }

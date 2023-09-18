@@ -27,21 +27,15 @@ public class BusinessLogic {
 
     private void complexJob() {
         log.info("복잡한 Job 시작");
-        try {
-            Thread.sleep(1000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
+        double random = Math.random();
+        if (random > 0.9) {
+            throw new RuntimeException("복잡한 Job 에러");
         }
         log.info("복잡한 Job 종료");
     }
 
     private void moreComplexJob() {
         log.info("좀 더 복잡한 Job 시작");
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
         log.info("좀 더 복잡한 Job 종료");
     }
 }
